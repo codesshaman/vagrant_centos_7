@@ -32,7 +32,7 @@ help:
 
 build:
 	@printf "$(OK_COLOR)==== Building configuration ${name}... ====$(NO_COLOR)\n"
-	@vagrant box add bento/debian-11 debian
+	@vagrant box add bento/centos-7 centos
 
 connect:
 	@printf "$(OK_COLOR)==== Connecting to virtual machine ${name}... ====$(NO_COLOR)\n"

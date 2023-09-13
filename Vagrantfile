@@ -22,12 +22,12 @@ Vagrant.configure(2) do |config|
     config.vm.define 'debian' do |debian|
         debian.vm.network :private_network, 
         ip: VIRTUAL_HOST_PRIVATE_IP_ADDRESS
-        debian.vm.hostname = "debian-minikube"
+        debian.vm.hostname = "centos-7"
         debian.vm.provision "shell",
         privileged: true, path: "setup.sh"
 #        args: [MASTER_NODES, WORKER_NODES]
         debian.vm.provider "virtualbox" do |v|
-            v.name = "debian_minikube"
+            v.name = "centos-7"
             v.memory = MEMORY_COUNT
             v.cpus = CPU_CORES_COUNT
         end
